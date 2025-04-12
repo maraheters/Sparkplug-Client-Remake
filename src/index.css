@@ -1,0 +1,11 @@
+
+@font-face {
+  font-family: Leckerli;
+  src: url('../src/assets/fonts/LeckerliOne-Regular.ttf');
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-leckerli: Leckerli;
+}
