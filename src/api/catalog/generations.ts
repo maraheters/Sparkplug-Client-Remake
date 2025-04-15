@@ -20,6 +20,10 @@ export const getAll = (): Promise<Generation[]> => {
     return apiFetch(`${BASE}`);
 };
 
+export const getAllByCarModel = (carModelId: number): Promise<Generation[]> => {
+    return apiFetch(`/catalog/models/${carModelId}/generations`);
+};
+
 export const getById = (id: number): Promise<Generation> => {
     return apiFetch(`${BASE}/${id}`);
 };

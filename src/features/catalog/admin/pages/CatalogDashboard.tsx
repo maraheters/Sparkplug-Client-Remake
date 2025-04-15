@@ -5,19 +5,15 @@ import { Modification } from "@/api/catalog/modifications";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React, { JSX, useState } from "react";
 import ManufacturerCreateForm from "../forms/ManufacturerCreateForm";
-import CarModelCreateForm from "../forms/ModelCreateForm";
+import CarModelCreateForm from "../forms/CarModelCreateForm";
 import GenerationCreateForm from "../forms/GenerationCreateForm";
+import ModificationCreateForm from "../forms/ModificationCreateForm";
 
 export default function CatalogDashboard() {
     type EntityType = "manufacturer" | "model" | "generation" | "modification";
 
     const [entityType, setEntityType] = useState<EntityType>("manufacturer");
     const [currentForm, setCurrentForm] = useState<React.ReactNode>(<ManufacturerCreateForm />)
-
-    const [selectedManufacturer, setSelectedManufacturer] = useState<Manufacturer | null>(null);
-    const [selectedModel, setSelectedModel] = useState<CarModel | null>(null);
-    const [selectedGeneration, setSelectedGeneration] = useState<Generation | null>(null);
-    const [selectedModification, setSelectedModification] = useState<Modification | null>(null);
 
     const handleEntityTypeChanged = (type: EntityType) => {
         setEntityType(type);
@@ -33,10 +29,9 @@ export default function CatalogDashboard() {
                 setCurrentForm(<GenerationCreateForm/>);
                 break;
             case "modification":
-                setCurrentForm(<div>Modification form</div>);
+                setCurrentForm(<ModificationCreateForm/>);
                 break;
         }
-        setSelectedManufacturer(null);
     }
 
 

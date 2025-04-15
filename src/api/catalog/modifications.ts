@@ -29,7 +29,10 @@ export type Transmission = {
 
 export type ModificationCreateRequest = {
     name: string;
-    country: string;
+    generationId: number;
+    drivetrain: Drivetrain;
+    engine: Engine;
+    transmission: Transmission;
 };
 
 export const getAll = (): Promise<Modification[]> => {
