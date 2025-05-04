@@ -25,6 +25,7 @@ export function Layout() {
 
         if (authorities.includes(CLIENT_BASIC)) {
             currentLinks.push(<Link to={"/"}>Home</Link>);
+            currentLinks.push(<Link to={"/create-listing"}>Create Listing</Link>);
         }
 
         if (

@@ -1,9 +1,5 @@
-import { CarModel } from "@/api/catalog/carModels";
-import { Generation } from "@/api/catalog/generations";
-import { Manufacturer } from "@/api/catalog/manufacturers";
-import { Modification } from "@/api/catalog/modifications";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import React, { JSX, useState } from "react";
+import React, { useState } from "react";
 import ManufacturerCreateForm from "../forms/ManufacturerCreateForm";
 import CarModelCreateForm from "../forms/CarModelCreateForm";
 import GenerationCreateForm from "../forms/GenerationCreateForm";

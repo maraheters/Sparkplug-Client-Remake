@@ -39,6 +39,10 @@ export const getAll = (): Promise<Modification[]> => {
     return apiFetch(`${BASE}`);
 };
 
+export const getAllByGeneration = (generationId: number): Promise<Modification[]> => {
+    return apiFetch(`/catalog/generations/${generationId}/modifications`);
+};
+
 export const getById = (id: number): Promise<Modification> => {
     return apiFetch(`${BASE}/${id}`);
 };

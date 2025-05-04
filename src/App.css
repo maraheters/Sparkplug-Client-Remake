@@ -72,9 +72,9 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
-/* @theme {
-  --container-
-} */
+@theme {
+  --color-sparkplug-primary: oklch(0.59 0.202 21.24);
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

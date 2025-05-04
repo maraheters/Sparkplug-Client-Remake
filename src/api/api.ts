@@ -9,14 +9,19 @@ export async function apiFetch<T>(
 	const user = localStorage.getItem("userAuth");
 	const token = user ? JSON.parse(user).token : null;
 
+	console.log(endpoint)
+
+	console.log("fetching " +endpoint)
 	const res = await fetch(`${API_BASE_URL}${endpoint}`, {
 		...options,
 		headers: {
-			"Content-Type": "application/json",
+			...(options.body instanceof FormData ? {} : { "Content-Type": "application/json" }),
 			...(includeAuth && token ? { Authorization: `Bearer ${token}` } : {}),
 			...options.headers,
 		},
 	});
+
+	console.log(res)
 
 	if (!res.ok) {
 		const errorText = await res.text();
@@ -35,7 +40,7 @@ export async function apiFetch<T>(
             }
         }
     }
-
+	
     // If no body or not JSON, return null
     return null as T;
 }
