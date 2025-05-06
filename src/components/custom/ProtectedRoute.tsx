@@ -1,6 +1,6 @@
 import { Navigate, Outlet } from "react-router";
 import { useAuth } from "@/hooks/AuthContext";
-import { Role } from "@/api/auth";
+import { Role } from "@/api/auth/auth";
 
 interface ProtectedRouteProps {
     roles?: Role[];

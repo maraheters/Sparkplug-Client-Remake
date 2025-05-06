@@ -53,7 +53,7 @@ export default function ListingDetails() {
                                 <div className="relative aspect-video">
                                     <img
                                         src={image.url}
-                                        alt={`${listing.carModification.manufacturer.name} ${listing.carModification.model.name} - Image ${index + 1}`}
+                                        alt={`${listing.carConfiguration.manufacturer.name} ${listing.carConfiguration.model.name} - Image ${index + 1}`}
                                         className="w-full h-full object-cover rounded-lg"
                                     />
                                 </div>
@@ -71,10 +71,10 @@ export default function ListingDetails() {
                     <div className="flex justify-between items-start">
                         <div>
                             <CardTitle className="text-3xl">
-                                {listing.carModification.manufacturer.name} {listing.carModification.model.name}
+                                {listing.carConfiguration.manufacturer.name} {listing.carConfiguration.model.name}
                             </CardTitle>
                             <CardDescription className="text-xl mt-2">
-                                {listing.carModification.generation.name}
+                                {listing.carConfiguration.generation.name}
                             </CardDescription>
                         </div>
                         <div className="text-3xl font-semibold text-primary">
@@ -88,18 +88,18 @@ export default function ListingDetails() {
                         <div>
                             <h3 className="text-lg font-semibold mb-2">Specifications</h3>
                             <div className="space-y-2 text-muted-foreground">
-                                <p><span className="font-medium">Engine:</span> {listing.carModification.engine.type}</p>
-                                <p><span className="font-medium">Transmission:</span> {listing.carModification.transmission.type}</p>
-                                <p><span className="font-medium">Drivetrain:</span> {listing.carModification.drivetrain.type}</p>
+                                <p><span className="font-medium">Engine:</span> {listing.carConfiguration.engine.type}</p>
+                                <p><span className="font-medium">Transmission:</span> {listing.carConfiguration.transmission.type}</p>
+                                <p><span className="font-medium">Drivetrain:</span> {listing.carConfiguration.drivetrain.type}</p>
                                 <p><span className="font-medium">Mileage:</span> {listing.mileage} km</p>
                             </div>
                         </div>
                         <div>
                             <h3 className="text-lg font-semibold mb-2">Engine Details</h3>
                             <div className="space-y-2 text-muted-foreground">
-                                <p><span className="font-medium">Fuel Type:</span> {listing.carModification.engine.fuelType}</p>
-                                <p><span className="font-medium">Horsepower:</span> {listing.carModification.engine.horsepower} HP</p>
-                                <p><span className="font-medium">Torque:</span> {listing.carModification.engine.torque} Nm</p>
+                                <p><span className="font-medium">Fuel Type:</span> {listing.carConfiguration.engine.fuelType}</p>
+                                <p><span className="font-medium">Horsepower:</span> {listing.carConfiguration.engine.horsepower} HP</p>
+                                <p><span className="font-medium">Torque:</span> {listing.carConfiguration.engine.torque} Nm</p>
                             </div>
                         </div>
                     </div>

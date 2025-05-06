@@ -9,6 +9,7 @@ import { AuthProvider } from './hooks/AuthContext'
 import Home from './Home'
 import { Toaster } from 'react-hot-toast'
 import ModifyListing from './features/listings/pages/ModifyListing'
+import { ProfilePage } from './features/profile/ProfilePage'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
                         <Route path="create-listing" element={<CreateListing />} />
                         <Route path="listings/:id" element={<ListingDetails />} />
                         <Route path="listings/:id/edit" element={<ModifyListing />} />
+                        <Route path="profile" element={<ProfilePage />} />
                     </Route>
 	
 					<Route path="login" element={<Login />}></Route>

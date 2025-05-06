@@ -2,7 +2,7 @@ import { Link, Outlet, useNavigate } from "react-router";
 import Header from "./Header";
 import { ReactNode, useEffect, useState } from "react";
 import { useAuth } from "@/hooks/AuthContext";
-import { Role } from "@/api/auth";
+import { Role } from "@/api/auth/auth";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { Button } from "../ui/button";
 
@@ -62,7 +62,7 @@ export function Layout() {
     return(
         <>
             <Header links={links} rightContent={dropdown}></Header>
-            <main className="mx-auto mt-20 max-w-[1200px]">
+            <main className="mx-auto mt-20 ">
                 <Outlet />
             </main>
         </>

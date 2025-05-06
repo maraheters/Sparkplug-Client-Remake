@@ -48,3 +48,10 @@ export const registerPhoneNumber = (
 		method: "POST",
 		body: JSON.stringify({ username, phoneNumber, password }),
 	});
+
+export const getMe = (): Promise<UserAuth> =>
+	apiFetch(`${API_URL}/me`, {
+		method: "GET",
+	}, true);
+	
+	

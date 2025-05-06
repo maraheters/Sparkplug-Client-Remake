@@ -83,7 +83,7 @@ export default function ModifyListing() {
                 <CardContent className="p-6 space-y-4">
                     <div>
                         <CardTitle className="text-3xl">
-                            {listing.carModification.manufacturer.name} {listing.carModification.model.name}
+                            {listing.carConfiguration.manufacturer.name} {listing.carConfiguration.model.name}
                         </CardTitle>
                         <CardDescription className="text-xl mt-2">
                             Edit Image Order

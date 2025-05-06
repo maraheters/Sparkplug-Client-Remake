@@ -1,4 +1,4 @@
-import { AuthResponse, Role, UserAuth } from "@/api/auth";
+import { AuthResponse, Role, UserAuth } from "@/api/auth/auth";
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import { useNavigate } from "react-router"
@@ -6,7 +6,7 @@ import {
     login as loginApi, 
     registerEmail as registerEmailApi,
     registerPhoneNumber as registerPhoneNumberApi
-} from "@/api/auth"
+} from "@/api/auth/auth"
 
 type JwtPayload = {
     id: number;
